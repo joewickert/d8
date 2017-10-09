@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the rvs_bs theme.
+
+rvs_bs.settings:
+  type: theme_settings
+  label: 'Trvs_bs settings'

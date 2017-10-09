@@ -1,0 +1,36 @@
+/* Adds full width, margin-less and padding-less container for Paragraphs. */
+/* This is so colors go full width.  Padding is on interior elements. */
+.structured-content.container {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.structured-content.container > div {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.structured-content.container > div > div {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/* apply to all containers */
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.container > div {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container > div > div {
+  padding-left: 0;
+  padding-right: 0;
+}
