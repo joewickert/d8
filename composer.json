@@ -26,7 +26,8 @@
         "drupal/paragraphs": "^1.1",
         "drupal/slick": "^1.0",
         "drupal/blazy": "1.x-dev",
-        "drupal/bootstrap_paragraphs": "2.x-dev"
+        "drupal/bootstrap_paragraphs": "2.x-dev",
+        "drupal/video_embed_field": "2.0.0-alpha1"
     },
     "require-dev": {
         "behat/mink": "~1.7",
