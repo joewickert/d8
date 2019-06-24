@@ -64,7 +64,7 @@
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
       {% if not navbar_attributes.hasClass(container) %}
-        <div class="{{ container }}">
+        <div class="container">
       {% endif %}
       <div class="navbar-header">
         {{ page.navigation }}
@@ -92,15 +92,23 @@
   {% endblock %}
 {% endif %}
 
+{# Background Image #}
+{% block background_image -%}
+  {%- if page.background_image -%}
+    {{- page.background_image -}}
+  {%- endif -%}
+{%- endblock %}
+
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
+    <div class="container">
     <div class="row">
 
       {# Header #}
       {% if page.header %}
         {% block header %}
-          <div class="col-8 col-sm-offset-2" role="heading">
+          <div class="col-12" role="heading">
             {{ page.header }}
           </div>
         {% endblock %}
@@ -118,10 +126,10 @@
       {# Content #}
       {%
         set content_classes = [
-          page.sidebar_first and page.sidebar_second ? 'col-sm-4 col-sm-offset-2',
-          page.sidebar_first and page.sidebar_second is empty ? 'col-sm-6 col-sm-offset-2',
-          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-6 col-sm-offset-2',
-          page.sidebar_first is empty and page.sidebar_second is empty ? 'col-8 col-sm-offset-2'
+          page.sidebar_first and page.sidebar_second ? 'col-sm-8',
+          page.sidebar_first and page.sidebar_second is empty ? 'col-sm-10',
+          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-10',
+          page.sidebar_first is empty and page.sidebar_second is empty ? 'col-12'
         ]
       %}
       <section{{ content_attributes.addClass(content_classes) }}>
@@ -150,11 +158,12 @@
       {# Sidebar Second #}
       {% if page.sidebar_second %}
         {% block sidebar_second %}
-          <aside class="col-sm-3" role="complementary">
+          <aside class="col-sm-2" role="complementary">
             {{ page.sidebar_second }}
           </aside>
         {% endblock %}
       {% endif %}
+    </div>
     </div>
   </div>
 {% endblock %}

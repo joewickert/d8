@@ -1,0 +1,19 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/bootstrap.min.css: {}
+      css/style.css: {}
+      css/aos.css: {}
+      css/bootstrap-datepicker.css: {}
+      css/jquery-ui.css: {}
+      'https://fonts.googleapis.com/css?family=Muli:300,400,700|Playfair+Display:400,700,900': { type: external }
+global-scripts:
+  version: 1.x
+  js: 
+    js/bootstrap-datepicker.min.js: {}
+    js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/jquery-ui.js
