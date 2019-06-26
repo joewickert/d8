@@ -92,11 +92,6 @@
            </div>
 
 
-            <div class="pt-5">
-              <p>Categories:  <a href="#">Food</a>, <a href="#">Travel</a>  Tags: <a href="#">#manila</a>, <a href="#">#asia</a></p>
-            </div>
-
-
           </div>
 
           <!-- END main-content -->
@@ -114,21 +109,23 @@
     </section>
 
     <!-- END section -->
-    {% if page.footer %}
     <div class="site-footer">
       <div class="container">
-          {{ page.footer }}
+        <div class="row mb-5">
+          <div class="col-md-4">
+            {{ page.footer_first }}
           </div>
+          <div class="col-md-3 ml-auto">
+             {{ page.footer_second }}
+          </div>
+          <div class="col-md-4">
+            <div class="mb-5">
+               {{ page.footer_third }}
+            </div>
         </div>
-        {% endif %}
-        <div class="row">
-          <div class="col-12 text-center">
-            <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              </p>
-          </div>
+      </div>
+    </div>
+
         </div>
       </div>
     </div>

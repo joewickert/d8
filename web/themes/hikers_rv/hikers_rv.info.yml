@@ -16,3 +16,6 @@ regions:
   featured_top: 'Featured top'
   breadcrumb: Breadcrumb
   content: 'Content'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
